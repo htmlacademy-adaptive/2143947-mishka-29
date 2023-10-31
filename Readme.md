@@ -1,4 +1,4 @@
-# Личный проект «{{projectTitle}}» 
+# Личный проект «Мишка» 
 
 * Студент: [Кирилл Злоказов](https://up.htmlacademy.ru/adaptive/29/user/2143947).
 * Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
