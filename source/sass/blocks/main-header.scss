@@ -1,0 +1,32 @@
+.main-header {
+  min-height: 79px;
+  width: 100%;
+
+  position: relative;
+
+  z-index: 1;
+}
+
+.main-header__logo-link {
+  position: absolute;
+
+  top: 22px;
+  left: 50%;
+
+  width: 86px;
+  height: 35px;
+
+  transform: translateX(-50%);
+
+  transition: opacity 0.3s ease;
+
+  overflow: hidden;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

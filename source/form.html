@@ -81,10 +81,144 @@
       <h1 class="visually-hidden">Сайт интернет-магазина Мишка. Вязание на заказ.</h1>
 
       <section class="hero hero--form">
-        <h2 class="hero__heading">Вязание на заказ</h2>
+        <div class="hero__wrapper">
+          <h2 class="hero__heading">Вязание на заказ</h2>
+        </div>
       </section>
 
+      <section class="order-knitting">
+        <p class="order-knitting__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
+        <form class="order-knitting__form form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="form__fieldset">
+            <h2 class="form__heading">Тип</h2>
+
+            <ul class="form__list form__list--radio">
+              <li class="form__item">
+                <label class="form__description-wrapper">
+                  <input class="visually-hidden form__control form__control--radio" type="radio" name="type" value="interior" checked>
+
+                  <span class="form__description">Аксессуар для интерьера</span>
+                </label>
+              </li>
+
+              <li class="form__item">
+                <label class="form__description-wrapper">
+                  <input class="visually-hidden form__control form__control--radio" type="radio" name="type" value="toy">
+
+                  <span class="form__description">Детская игрушка</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <h2 class="form__heading">Цвет</h2>
+
+            <ul class="form__list form__list--checkbox">
+              <li class="form__item">
+                <label class="form__description-wrapper">
+                  <input class="visually-hidden form__control form__control--checkbox" type="checkbox" name="color" value="white" checked>
+
+                  <span class="form__description">Белый</span>
+                </label>
+              </li>
+
+              <li class="form__item">
+                <label class="form__description-wrapper">
+                  <input class="visually-hidden form__control form__control--checkbox" type="checkbox" name="color" value="grey" checked>
+
+                  <span class="form__description">Серый</span>
+                </label>
+              </li>
+
+              <li class="form__item">
+                <label class="form__description-wrapper">
+                  <input class="visually-hidden form__control form__control--checkbox" type="checkbox" name="color" value="tiffany">
+
+                  <span class="form__description">Тиффани</span>
+                </label>
+              </li>
+
+              <li class="form__item">
+                <label class="form__description-wrapper">
+                  <input class="visually-hidden form__control form__control--checkbox" type="checkbox" name="color" value="black">
+
+                  <span class="form__description">Черный</span>
+                </label>
+              </li>
+
+              <li class="form__item">
+                <label class="form__description-wrapper">
+                  <input class="visually-hidden form__control form__control--checkbox" type="checkbox" name="color" value="pink">
+
+                  <span class="form__description">Розовый</span>
+                </label>
+              </li>
+
+              <li class="form__item">
+                <label class="form__description-wrapper">
+                  <input class="visually-hidden form__control form__control--checkbox" type="checkbox" name="color" value="orange">
+
+                  <span class="form__description">Оранжевый</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <h2 class="form__heading">ФИО</h2>
+
+            <label class="form__input-label">
+              <span class="form__input-description">Имя:</span>
+
+              <input class="form__input" type="text" name="client-name" placeholder="Введите ваше имя*" required>
+            </label>
+
+            <label class="form__input-label">
+              <span class="form__input-description">Фамилия:</span>
+
+              <input class="form__input" type="text" name="client-surname" placeholder="Укажите фамилию*" required>
+            </label>
+
+            <label class="form__input-label">
+              <span class="form__input-description">Отчество:</span>
+
+              <input class="form__input" type="text" name="client-patronymic" placeholder="Отчество, если желаете">
+            </label>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <h2 class="form__heading">Тел</h2>
+
+            <label class="form__input-label form__input-label--phone">
+              <input class="form__input" type="tel" name="client-phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+            </label>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <h2 class="form__heading">E-mail</h2>
+
+            <label class="form__input-label form__input-label--email">
+              <input class="form__input" type="email" name="client-email" placeholder="Ваш Email*" required>
+            </label>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <h2 class="form__heading">Доп</h2>
+
+            <div class="form__textarea-wrapper">
+              <textarea class="form__input form__input--textarea" name="tourist-comment" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
+          </fieldset>
+
+          <div class="form__button-wrapper">
+            <p class="form__note">*Поля обязательны для заполнения</p>
+
+            <button class="form__button main-button" type="submit">Отправить заказ</button>
+          </div>
+        </form>
+      </section>
     </main>
 
     <footer class="main-footer">
@@ -114,5 +248,6 @@
       </a>
     </footer>
 
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

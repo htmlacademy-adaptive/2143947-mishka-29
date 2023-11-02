@@ -6,3 +6,14 @@
 // PAGE
 
 @use "./blocks/page.scss";
+@use "./blocks/main-button.scss";
+@use "./blocks/main-container.scss";
+
+// HEADER
+
+@use "./blocks/main-header.scss";
+@use "./blocks/main-navigation.scss";
+
+// HERO
+
+@use "./blocks/hero.scss";

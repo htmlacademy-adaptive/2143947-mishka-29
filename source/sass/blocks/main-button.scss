@@ -1,0 +1,22 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.main-button {
+  @include mix.font(var.$main-button-font, 18px, 700, 20px);
+  text-transform: uppercase;
+
+  padding: 10px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 52px;
+
+  background-color: var.$main-button-background;
+  border: 2px solid var.$main-button-border;
+
+  box-sizing: border-box;
+}

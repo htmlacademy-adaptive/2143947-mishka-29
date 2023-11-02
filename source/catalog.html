@@ -24,15 +24,18 @@
       <nav class="main-navigation main-navigation--closed">
         <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
+
           <span class="main-navigation__toggle-decoration main-navigation__toggle-decoration--top"></span>
+
           <span class="main-navigation__toggle-decoration main-navigation__toggle-decoration--middle"></span>
+
           <span class="main-navigation__toggle-decoration main-navigation__toggle-decoration--bottom"></span>
         </button>
 
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__site-list site-list">
             <li class="site-list__item site-list__item--current">
-              <a class="site-list__link site-list__link" href="catalog.html">
+              <a class="site-list__link site-list__link" href="#">
                 Каталог товаров
               </a>
             </li>
@@ -81,7 +84,9 @@
       <h1 class="visually-hidden">Сайт интернет-магазина Мишка. Каталог товаров.</h1>
 
       <section class="hero hero--catalog">
-        <h2 class="hero__heading">Каталог товаров</h2>
+        <div class="hero__wrapper">
+          <h2 class="hero__heading">Каталог товаров</h2>
+        </div>
       </section>
 
       <section class="products">
@@ -214,6 +219,7 @@
             <li class="order-message__item">
               <label class="order-message__label">
                 <input class="visually-hidden order-message__control" type="radio" name="size" value="S" checked>
+
                 <span class="order-message__control-description">S</span>
               </label>
             </li>
@@ -221,6 +227,7 @@
             <li class="order-message__item">
               <label class="order-message__label">
                 <input class="visually-hidden order-message__control" type="radio" name="size" value="M">
+
                 <span class="order-message__control-description">M</span>
               </label>
             </li>
@@ -228,6 +235,7 @@
             <li class="order-message__item">
               <label class="order-message__label">
                 <input class="visually-hidden order-message__control" type="radio" name="size" value="L">
+
                 <span class="order-message__control-description">L</span>
               </label>
             </li>
@@ -238,5 +246,6 @@
       </div>
     </section>
 
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

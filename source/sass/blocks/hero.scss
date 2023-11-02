@@ -1,0 +1,56 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.hero {
+  background-color: var.$hero-background;
+
+  width: 100%;
+  height: auto;
+
+  overflow: hidden;
+
+  &--index {
+    background-image: url("../img/jpg/hero-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+  }
+
+  @media (min-resolution: 2dppx) {
+    &--index {
+      background-image: url("../img/jpg/hero-mobile@2x.jpg");
+    }
+  }
+}
+
+.hero__wrapper {
+  padding: 73px 30px;
+}
+
+.hero--index .hero__wrapper {
+  padding: 73px 30px 120px 30px;
+}
+
+.hero__heading {
+  margin: 0;
+
+  text-align: center;
+}
+
+.hero__menu-list {
+  @include mix.list-reset;
+}
+
+.hero__menu-link {
+  @include mix.font(var.$bright-text, 19px, 700, 24px);
+
+  display: block;
+
+  padding: 24px 160px 31px 30px;
+
+  background-color: var.$hero-link-background;
+
+  &--toys {
+    background-color: var.$hero-link-additional-background;
+  }
+}

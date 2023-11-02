@@ -1,0 +1,131 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.main-navigation__toggle {
+  position: absolute;
+
+  top: 29px;
+  right: 30px;
+
+  width: 21px;
+  height: 20px;
+
+  background-color: unset;
+  border: none;
+
+  z-index: 10;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+
+    pointer-events: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    display: none;
+  }
+}
+
+.main-navigation__toggle-decoration {
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: var.$burger-menu-opened;
+
+  transition: background-color 0.3s ease;
+
+  &--top {
+    top: 2px;
+    left: 0;
+
+    transform: translateY(7px) rotate(45deg);
+
+    transition: transform 0.3s ease;
+  }
+
+  &--middle {
+    opacity: 0;
+
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%) scaleX(0);
+
+    transition: transform 0.6s ease, opacity 0.3s ease;
+  }
+
+  &--bottom {
+    bottom: 2px;
+    left: 0;
+
+    transform: translateY(-7px) rotate(-45deg);
+
+    transition: transform 0.3s ease;
+  }
+}
+
+.main-navigation--closed .main-navigation__toggle-decoration {
+  background-color: var.$burger-menu-closed;
+
+  &--top {
+    transform: translateY(0) rotate(0);
+  }
+
+  &--middle {
+    opacity: 1;
+
+    transform: translateY(-50%) scaleX(1);
+  }
+
+  &--bottom {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+.main-navigation__wrapper {
+  position: absolute;
+
+  top: 79px;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 5;
+
+  @media (min-width: var.$tablet-width) {
+    position: initial;
+  }
+}
+
+.main-navigation--closed .main-navigation__wrapper {
+  display: none;
+
+  @media (min-width: var.$tablet-width) {
+    display: block;
+  }
+}
+
+.page__body--no-js .main-navigation__wrapper {
+  display: block;
+
+  position: initial;
+}
+
+.main-navigation__site-list,
+.main-navigation__service-list,
+.main-navigation__additional-list {
+  @include mix.list-reset;
+}
