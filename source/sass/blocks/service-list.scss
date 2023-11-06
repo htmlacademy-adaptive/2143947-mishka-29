@@ -7,6 +7,7 @@
 
   @media (min-width: var.$tablet-width) {
     flex-direction: row;
+    flex-wrap: wrap;
 
     grid-row: 1 / 2;
     grid-column: 1 / -1;
@@ -123,8 +124,6 @@
 }
 
 .service-list__link--search {
-  box-shadow: 0 1px 0 0 var.$header-shadow;
-
   &::before {
     top: 32px;
     left: 32px;

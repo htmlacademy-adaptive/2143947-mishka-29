@@ -6,6 +6,7 @@
 
   @media (min-width: var.$desktop-width) {
     display: flex;
+    flex-wrap: wrap;
 
     grid-row: 2 / 3;
     grid-column: 1 / 2;
