@@ -13,7 +13,15 @@
 
 @use "./blocks/main-header.scss";
 @use "./blocks/main-navigation.scss";
+@use "./blocks/site-list.scss";
+@use "./blocks/service-list.scss";
+@use "./blocks/site-additional-list.scss";
 
 // HERO
 
 @use "./blocks/hero.scss";
+
+
+// WEEKLY-PRODUCT
+
+@use "./blocks/weekly-product.scss";

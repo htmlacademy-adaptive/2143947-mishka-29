@@ -18,7 +18,13 @@
   <body class="page__body page__body--no-js">
     <header class="main-header">
       <a class="main-header__logo-link" href="index.html">
-        <img src="img/svg/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Мишка.">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/svg/mishka-logo-desktop.svg">
+
+          <source media="(min-width: 768px)" srcset="img/svg/mishka-logo-tablet.svg">
+
+          <img src="img/svg/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Мишка.">
+        </picture>
       </a>
 
       <nav class="main-navigation main-navigation--closed">
@@ -47,7 +53,7 @@
           <ul class="main-navigation__service-list service-list">
             <li class="service-list__item">
               <a class="service-list__link service-list__link--search" href="#">
-                Поиск по сайту
+                <span class="service-list__link-text">Поиск по сайту</span>
               </a>
             </li>
 
@@ -72,7 +78,7 @@
             </li>
           </ul>
 
-          <a class="main-navigation__link" href="#">Бесплатная доставка по России</a>
+          <a class="main-navigation__note">Бесплатная доставка по России</a>
         </div>
       </nav>
     </header>

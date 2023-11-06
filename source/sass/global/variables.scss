@@ -3,15 +3,21 @@
 $main-text: #444444;
 $bold-text: #000000;
 $bright-text: #ffffff;
+$marker-text: #63d1bb;
 
 // BACKGROUND COLORS
 
 $main-background: #ffffff;
 $hero-background: #f1f1f1;
+$index-hero-background: #f9f9f9;
 
 // SHADOWS
 
+$header-shadow: #ededed;
+
 // DIVIDER
+
+$weekly-product-table-border: #ececec;
 
 // MAIN-BUTTON
 
@@ -31,9 +37,17 @@ $burger-menu-opened: #000000;
 // HERO-LINK
 
 $hero-link-background: #63d1bb;
+$hero-link-background-hover: #59d5bc;
 $hero-link-additional-background: #56c3b2;
+$hero-link-additional-background-hover: #46c1ae;
 
 // INPUT
+
+// ICONS
+
+$header-menu-icons: rgba(#000000, 0.2);
+$header-menu-icons-hover: #63d1bb;
+$header-menu-icons-active: rgba(#63d1bb, 0.3);
 
 // VIEWPORTS
 

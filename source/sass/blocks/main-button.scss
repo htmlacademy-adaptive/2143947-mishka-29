@@ -19,4 +19,28 @@
   border: 2px solid var.$main-button-border;
 
   box-sizing: border-box;
+
+  cursor: pointer;
+
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    color: var.$main-button-hover-font;
+
+    background-color: var.$main-button-hover-background;
+  }
+
+  &:active {
+    color: var.$main-button-active-font;
+
+    background-color: var.$main-button-hover-background;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+
+    pointer-events: none;
+
+    cursor: default;
+  }
 }
