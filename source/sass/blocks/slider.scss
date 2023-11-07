@@ -1,0 +1,6 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.slider__list {
+  @include mix.list-reset;
+}
