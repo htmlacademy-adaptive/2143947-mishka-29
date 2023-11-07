@@ -200,7 +200,7 @@
 
           <div class="reviews__slider slider">
             <ul class="slider__list">
-              <li class="slider__item">
+              <li class="slider__item slider__item--current">
                 <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.&nbsp;<br>В отчаянии, я накупила аксессуаров и игрушек в Мишке,&nbsp;<br>и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
 
                 <div class="reviews__author">
@@ -211,7 +211,7 @@
               </li>
 
               <li class="slider__item">
-                <p class="reviews__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.&nbsp;<br>В отчаянии, я накупила аксессуарови игрушек в Мишке,&nbsp;<br>и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                <p class="reviews__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.&nbsp;<br>В отчаянии, я накупила аксессуаров и игрушек в Мишке,&nbsp;<br>и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
 
                 <div class="reviews__author">
                   <p class="reviews__author-name">Екатерина Красильникова</p>
@@ -221,7 +221,7 @@
               </li>
 
               <li class="slider__item">
-                <p class="reviews__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.&nbsp;<br>В отчаянии, я накупила аксессуарови игрушек в Мишке,&nbsp;<br>и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                <p class="reviews__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.&nbsp;<br>В отчаянии, я накупила аксессуаров и игрушек в Мишке,&nbsp;<br>и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
 
                 <div class="reviews__author">
                   <p class="reviews__author-name">Елена Красильникова</p>
@@ -266,14 +266,18 @@
         <div class="contacts__map map-widget">
           <iframe class="map-widget__interactive" src="https://yandex.com/map-widget/v1/?um=constructor%3A43a46f6898c5f6349d856ef537adb37cc08e6f453463f662957c182ca309c69c&amp;source=constructor" width="320" height="455"></iframe>
 
-          <picture>
-            <source type="image/webp" srcset="img/webp/map-mobile@1x.webp 1x, img/webp/map-mobile@2x.webp 2x">
+          <div class="map-widget__fallback">
+            <picture>
+              <source type="image/webp" srcset="img/webp/map-mobile@1x.webp 1x, img/webp/map-mobile@2x.webp 2x">
 
-            <img src="img/jpg/map-mobile@1x.jpg" srcset="img/jpg/map-mobile@2x.jpg 2x" width="260" height="315" alt="Адрес интернет-магазина Мишка на карте.">
-          </picture>
+              <img src="img/jpg/map-mobile@1x.jpg" srcset="img/jpg/map-mobile@2x.jpg 2x" width="260" height="454" alt="Адрес интернет-магазина Мишка на карте.">
+            </picture>
+          </div>
         </div>
 
-        <a class="contacts__link" href="#">Напишите нам</a>
+        <div class="contacts__link-wrapper">
+          <a class="contacts__link main-button" href="#">Напишите нам</a>
+        </div>
       </section>
     </main>
 
