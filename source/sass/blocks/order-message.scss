@@ -1,0 +1,87 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.order-message {
+  position: relative;
+
+  width: 100%;
+
+  padding: 27px 29px 45px 29px;
+
+  background-color: var.$message-background;
+  box-shadow: 0 5px 10px 0 var.$modal-shadow;
+  border: 1px solid var.$modal-border;
+
+  box-sizing: border-box;
+}
+
+.order-message__heading {
+  @include mix.font(var.$bold-text, 25px, 700, 30px);
+
+  text-transform: uppercase;
+
+  padding: 0 40px 0 60px;
+  margin: 0 0 14px 0;
+
+  box-sizing: border-box;
+}
+
+.order-message__description {
+  @include mix.font(var.$main-text, 15px, 400, 30px);
+
+  text-align: center;
+
+  margin: 0 0 22px 0;
+}
+
+.order-message__list {
+  @include mix.list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  column-gap: 7px;
+  row-gap: 7px;
+
+  width: 100%;
+
+  margin: 0 0 49px 0;
+}
+
+.order-message__control-description {
+  @include mix.font(var.$main-text, 17px, 700, 16px);
+
+  text-transform: uppercase;
+
+  display: flex;
+
+  width: 82px;
+  height: 52px;
+
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid var.$modal-radio-border;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  transition: border-color 0.3s ease;
+}
+
+.order-message__control:hover + .order-message__control-description {
+  border: 2px solid var.$modal-radio-border-hover;
+}
+
+.order-message__control:checked + .order-message__control-description {
+  border: 2px solid var.$modal-radio-border-active;
+}
+
+.order-message__control:disabled + .order-message__control-description {
+  opacity: 0.1;
+
+  pointer-events: none;
+
+  cursor: default;
+}

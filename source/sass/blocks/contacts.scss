@@ -58,6 +58,8 @@
   }
 
   @media (min-width: var.$desktop-width) {
+    @include mix.font(var.$bold-text, 53px, 700, 57px);
+
     grid-row: 1 / 2;
     grid-column: 1 / 2;
 

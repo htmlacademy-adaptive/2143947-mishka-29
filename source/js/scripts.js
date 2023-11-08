@@ -46,3 +46,28 @@ buttonNext.addEventListener('click', () => {
   }
   slides[counter].classList.add('slider__item--current');
 });
+
+// MODAL-WINDOW
+
+const indexOrderLink = document.querySelector('.weekly-product__order-link');
+const orderModal = document.querySelector('.modal');
+
+indexOrderLink.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  orderModal.classList.add('modal--show');
+});
+
+orderModal.addEventListener('click', (evt) => {
+  if (!evt.target.closest('.modal')) {
+    orderModal.classList.remove('modal--show');
+  }
+});
+
+window.addEventListener('keydown', (evt) => {
+  if (evt.key === 'Escape') {
+    if (orderModal.classList.contains('modal--show')) {
+      evt.preventDefault();
+      orderModal.classList.remove('modal--show');
+    }
+  }
+});

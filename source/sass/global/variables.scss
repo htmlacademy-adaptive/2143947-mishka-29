@@ -10,18 +10,21 @@ $marker-text: #63d1bb;
 $main-background: #ffffff;
 $hero-background: #f1f1f1;
 $index-hero-background: #f9f9f9;
+$footer-background: #f1f1f1;
+$modal-background: rgba(#ffffff, 0.9);
+$message-background: #ffffff;
 
 // SHADOWS
 
 $header-shadow: #ededed;
+$modal-shadow: rgba(#000101, 0.25);
 
-// DIVIDER
+// BORDERS
 
 $weekly-product-table-border: #ececec;
-
-// BORDER
-
 $slider-button-border: #ececec;
+$footer-border: #e5e5e5;
+$modal-border: #c6c6c6;
 
 // MAIN-BUTTON
 
@@ -32,6 +35,15 @@ $main-button-hover-background: #444444;
 $main-button-hover-font: #ffffff;
 $main-button-active-background: #444444;
 $main-button-active-font: rgba(#ffffff, 0.3);
+
+// MODAL-BUTTON
+
+$modal-button-background: #63d1bb;
+$modal-button-border: #63d1bb;
+$modal-button-font: #ffffff;
+$modal-button-hover-background: #46c1ae;
+$modal-button-active-background: #46c1ae;
+$modal-button-active-font: rgba(#ffffff, 0.3);
 
 // BURGER-BUTTON
 
@@ -53,11 +65,27 @@ $email-link-border-hover: #46c1ae;
 
 // INPUT
 
+$modal-radio-border: rgba(#444444, 0.1);
+$modal-radio-border-hover: rgba(#444444, 0.3);
+$modal-radio-border-active: #62d1ba;
+
 // ICONS
 
 $header-menu-icons: rgba(#000000, 0.2);
 $header-menu-icons-hover: #63d1bb;
 $header-menu-icons-active: rgba(#63d1bb, 0.3);
+
+$social-link-icon: #231f20;
+$social-link-icon-hover: #46c1ae;
+$social-link-icon-active: rgba(#46c1ae, 0.3);
+
+$academy-icon: #63d1bb;
+$academy-icon-hover: #46c1ae;
+$academy-icon-active: rgba(#46c1ae, 0.3);
+
+$footer-logo: #000000;
+$footer-logo-hover: #46c1ae;
+$footer-logo-active: rgba(#46c1ae, 0.3);
 
 // VIEWPORTS
 

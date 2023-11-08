@@ -1,0 +1,131 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.main-footer {
+  background-color: var.$footer-background;
+}
+
+.main-footer__wrapper {
+  padding: 25px 30px 32px 30px;
+
+  box-sizing: border-box;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 51px 50px 58px 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    width: 1150px;
+
+    margin: 0 auto;
+  }
+}
+
+.main-footer__logo-link {
+  display: none;
+
+  @media (min-width: var.$tablet-width) {
+    display: block;
+
+    width: 102px;
+    height: 34px;
+  }
+}
+
+.main-footer__logo {
+  @media (min-width: var.$tablet-width) {
+    fill: var.$footer-logo;
+
+    transition: fill 0.3s ease;
+  }
+}
+
+.main-footer__logo-link:hover .main-footer__logo {
+  @media (min-width: var.$tablet-width) {
+    fill: var.$footer-logo-hover;
+  }
+}
+
+.main-footer__logo-link:active .main-footer__logo {
+  @media (min-width: var.$tablet-width) {
+    fill: var.$footer-logo-active;
+  }
+}
+
+.main-footer__social {
+  @include mix.list-reset;
+
+  margin: 0 0 28px 0;
+
+  position: relative;
+
+  align-items: flex-start;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    bottom: -28px;
+    left: 50%;
+
+    width: 100%;
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background-color: var.$footer-border;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    margin: 4px 0 0 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.main-footer__copyright {
+  @include mix.font(var.$bold-text, 19px, 700, 18px);
+
+  display: block;
+
+  padding: 29px 93px 0 39px;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 8px 52px 8px 0;
+
+    justify-self: flex-end;
+  }
+}
+
+.main-footer__copyright-logo {
+  position: absolute;
+
+  top: 22px;
+  right: 39px;
+
+  fill: var.$academy-icon;
+
+  transition: fill 0.3s ease;
+
+  @media (min-width: var.$tablet-width) {
+    top: 0;
+    right: 0;
+  }
+}
+
+.main-footer__copyright:hover .main-footer__copyright-logo {
+  fill: var.$academy-icon-hover;
+}
+
+.main-footer__copyright:active .main-footer__copyright-logo {
+  fill: var.$academy-icon-active;
+}
