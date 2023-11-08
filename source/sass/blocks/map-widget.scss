@@ -1,3 +1,5 @@
+@use "../global/variables" as var;
+
 .map-widget {
   position: relative;
 }
@@ -11,6 +13,10 @@
   border: none;
 
   z-index: 5;
+
+  @media (min-width: var.$tablet-width) {
+    height: 457px;
+  }
 }
 
 .map-widget__fallback {
@@ -26,23 +32,37 @@
 
   z-index: 0;
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
+  &::before {
+    content: "";
+    position: absolute;
 
-  //   top: 50%;
-  //   left: 50%;
+    top: 145px;
+    left: calc(50% - 22px);
 
-  //   width: 27px;
-  //   height: 27px;
+    width: 67px;
+    height: 100px;
 
-  //   transform: translate(-50%, -50%);
+    background-image: url("../img/svg/map-pin.svg");
+    background-repeat: no-repeat;
 
-  //   background-image: url("../img/svg/map-marker.svg");
-  //   background-repeat: no-repeat;
+    z-index: 1;
+  }
 
-  //   z-index: 1;
-  // }
+  @media (min-width: var.$tablet-width) {
+    height: 457px;
+
+    &::before {
+      top: 139px;
+      left: calc(50% - 21px);
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    &::before {
+      top: 146px;
+      left: 239px;
+    }
+  }
 }
 
 .map-widget__fallback img {

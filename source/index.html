@@ -259,7 +259,7 @@
           <div class="contacts__address-wrapper">
             <p class="contacts__address-heading">адрес:</p>
 
-            <p class="contacts__address-description">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</p>
+            <p class="contacts__address-description">г. Санкт-Петербург<br> ул. Большая Конюшенная<br> д. 19/8, офис 101</p>
           </div>
         </address>
 
@@ -268,7 +268,15 @@
 
           <div class="map-widget__fallback">
             <picture>
+              <source media="(min-width: 1150px)" type="image/webp" srcset="img/webp/map-desktop@1x.webp 1x, img/webp/map-desktop@2x.webp 2x">
+
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/webp/map-tablet@1x.webp 1x, img/webp/map-tablet@2x.webp 2x">
+
               <source type="image/webp" srcset="img/webp/map-mobile@1x.webp 1x, img/webp/map-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1150px)" srcset="img/jpg/map-desktop@1x.jpg 1x" srcset="img/jpg/map-desktop@2x.jpg 2x">
+
+              <source media="(min-width: 768px)" srcset="img/jpg/map-tablet@1x.jpg 1x" srcset="img/jpg/map-tablet@2x.jpg 2x">
 
               <img src="img/jpg/map-mobile@1x.jpg" srcset="img/jpg/map-mobile@2x.jpg 2x" width="260" height="454" alt="Адрес интернет-магазина Мишка на карте.">
             </picture>
