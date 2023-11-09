@@ -21,7 +21,18 @@
 
 @use "./blocks/hero.scss";
 
+// FOOTER
 
+@use "./blocks/main-footer.scss";
+@use "./blocks/social-list.scss";
+
+// MODAL
+
+@use "./blocks/modal.scss";
+@use "./blocks/order-message.scss";
+@use "./blocks/modal-button.scss";
+
+// INDEX
 // WEEKLY-PRODUCT
 
 @use "./blocks/weekly-product.scss";
@@ -41,13 +52,8 @@
 @use "./blocks/contacts.scss";
 @use "./blocks/map-widget.scss";
 
-// FOOTER
 
-@use "./blocks/main-footer.scss";
-@use "./blocks/social-list.scss";
+// CATALOG
+// PRODUCTS
 
-// MODAL
-
-@use "./blocks/modal.scss";
-@use "./blocks/order-message.scss";
-@use "./blocks/modal-button.scss";
+@use "./blocks/products.scss";

@@ -134,7 +134,7 @@
 
   height: 270px;
 
-  overflow: scroll;
+  overflow-y: scroll;
 
   @media (min-width: var.$tablet-width) {
     @include mix.font(var.$main-text, 17px, 400, 30px);
