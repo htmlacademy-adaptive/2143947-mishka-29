@@ -58,7 +58,7 @@ indexOrderLink.addEventListener('click', (evt) => {
 });
 
 orderModal.addEventListener('click', (evt) => {
-  if (!evt.target.closest('.modal')) {
+  if (!evt.target.closest('.modal__order-message')) {
     orderModal.classList.remove('modal--show');
   }
 });
