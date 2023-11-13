@@ -9,6 +9,7 @@
   @include mix.list-reset;
 
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
 
   overflow: hidden;

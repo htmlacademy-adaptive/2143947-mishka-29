@@ -27,6 +27,16 @@
 
   max-width: 450px;
 
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 var.$products-cart-shadow;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 var.$products-cart-shadow;
+  }
+
   @media (min-width: var.$tablet-width) {
     padding: 0 0 46px 0;
 

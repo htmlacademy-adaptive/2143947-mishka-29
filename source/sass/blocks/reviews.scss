@@ -134,7 +134,7 @@
 
   height: 270px;
 
-  overflow-y: scroll;
+  overflow-y: auto;
 
   @media (min-width: var.$tablet-width) {
     @include mix.font(var.$main-text, 17px, 400, 30px);
@@ -152,6 +152,12 @@
     margin: 0 65px 44px 0;
 
     height: 90px;
+  }
+}
+
+.reviews__author {
+  @media (min-width: var.$desktop-width) {
+    max-width: 50%;
   }
 }
 

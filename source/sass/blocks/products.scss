@@ -44,12 +44,13 @@
 
   margin: 0 auto;
 
+  transition: box-shadow 0.3s ease;
+
   &:hover {
     box-shadow: 0 6px 10px 0 var.$products-cart-shadow;
   }
 
-  &:focus-visible {
-    outline: none;
+  &:active {
     box-shadow: 0 3px 5px 0 var.$products-cart-shadow;
   }
 
@@ -237,6 +238,8 @@
     mask-repeat: no-repeat;
 
     background-color: var.$products-cart-icon;
+
+    transition: background-color 0.3s ease;
   }
 
   &:hover {

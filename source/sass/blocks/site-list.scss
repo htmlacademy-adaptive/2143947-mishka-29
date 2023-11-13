@@ -39,7 +39,7 @@
 
   @media (min-width: var.$desktop-width) {
     min-height: 88px;
-    min-width: 185px;
+    width: 185px;
   }
 }
 
@@ -93,12 +93,12 @@
       width: 1px;
       height: 100%;
 
-      background-color: var.$header-shadow;
+      background-color: var.$header-border;
     }
   }
 }
 
-.site-list__item:last-of-type .site-list__link {
+.site-list__item:nth-of-type(2n) .site-list__link {
   &::before {
     display: none;
   }

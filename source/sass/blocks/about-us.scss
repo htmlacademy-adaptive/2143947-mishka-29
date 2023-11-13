@@ -44,6 +44,10 @@
 
   @media (min-width: var.$tablet-width) {
     width: 50%;
+
+    padding: 0 10px 0 0;
+
+    box-sizing: border-box;
   }
 }
 

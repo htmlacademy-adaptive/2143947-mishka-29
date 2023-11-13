@@ -13,20 +13,23 @@ $index-hero-background: #f9f9f9;
 $footer-background: #f1f1f1;
 $modal-background: rgba(#ffffff, 0.9);
 $message-background: #ffffff;
+$form-additional-background: #f1f1f1;
 
 // SHADOWS
 
-$header-shadow: #ededed;
+$header-shadow: #ececec;
 $modal-shadow: rgba(#000101, 0.25);
 $products-cart-shadow: rgba(#000000, 0.1);
 
 // BORDERS
 
+$header-border: rgba(#000000, 0.1);
 $weekly-product-table-border: #ececec;
 $slider-button-border: #ececec;
 $footer-border: #e5e5e5;
 $modal-border: #c6c6c6;
 $products-cart-border: #ececec;
+
 
 // MAIN-BUTTON
 
@@ -70,6 +73,22 @@ $email-link-border-hover: #46c1ae;
 $modal-radio-border: rgba(#444444, 0.1);
 $modal-radio-border-hover: rgba(#444444, 0.3);
 $modal-radio-border-active: #62d1ba;
+
+$input-heading: #63d1bb;
+
+$input-border: #444444;
+$input-border-hover: #62d1ba;
+$input-border-active: rgba(#444444, 0.3);
+
+$input-radio-marker: #62d1ba;
+
+$input-shadow: #000000;
+$input-shadow-hover: #62d1ba;
+$input-shadow-active: #62d1ba;
+
+$input-icons: rgba(#000000, 0.2);
+$input-icons-hover: #62d1ba;
+$input-icons-active: #62d1ba;
 
 // ICONS
 
