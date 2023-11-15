@@ -373,15 +373,32 @@
     column-gap: 25px;
 
     width: 100%;
+
+    &--phone,
+    &--email {
+      column-gap: 0;
+    }
   }
 
   @media (min-width: var.$desktop-width) {
     width: 700px;
+
+    &--phone,
+    &--email {
+      width: 874px;
+    }
   }
+}
+
+.form__input-label--phone .form__heading,
+.form__input-label--email .form__heading {
+  cursor: pointer;
 }
 
 .form__input-description {
   @include mix.font(var.$bold-text, 17px, 700, 18px);
+
+  cursor: pointer;
 
   @media (min-width: var.$tablet-width) {
     @include mix.font(var.$bold-text, 19px, 700, 18px);
@@ -437,18 +454,19 @@
     height: 142px;
 
     border: 2px solid var.$input-border;
+    box-shadow: unset;
 
     resize: none;
 
     &:hover {
       border: 2px solid var.$input-border-hover;
-      box-shadow: 0 -2px 0 0 var.$input-shadow-hover inset;
+      box-shadow: unset;
     }
 
     &:focus-visible,
     &:active {
       border: 2px solid var.$input-border-hover;
-      box-shadow: 0 -2px 0 0 var.$input-shadow-active inset;
+      box-shadow: unset;
 
       outline: unset;
     }
@@ -461,7 +479,7 @@
       pointer-events: none;
 
       border: 2px solid var.$input-border;
-      box-shadow: 0 -2px 0 0 var.$input-shadow inset;
+      box-shadow: unset;
     }
   }
 

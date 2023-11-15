@@ -67,6 +67,14 @@
     background-repeat: no-repeat;
   }
 
+  &:first-of-type {
+    padding: 82px 0 0 0;
+  }
+
+  &:last-of-type {
+    padding: 84px 0 0 0;
+  }
+
   &--ecology {
     &::before {
       top: 28px;
@@ -118,7 +126,7 @@
   &--domestic {
     &::before {
       top: 33px;
-      left: 0;
+      left: -5px;
 
       width: 55px;
       height: 23px;
@@ -146,6 +154,10 @@
 
     &:first-of-type {
       padding: 98px 0 0 0;
+    }
+
+    &:last-of-type {
+      padding: 110px 0 0 0;
     }
 
     &--ecology {

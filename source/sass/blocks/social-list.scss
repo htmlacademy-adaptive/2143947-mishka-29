@@ -8,6 +8,10 @@
 
   column-gap: 29px;
   row-gap: 8px;
+
+  @media (min-width: var.$tablet-width) {
+    justify-content: flex-start;
+  }
 }
 
 .social-list__link {
