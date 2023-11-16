@@ -18,11 +18,11 @@
   }
 
   &--color {
-    margin: 0 0 33px 0;
+    margin: 0 0 34px 0;
   }
 
   &--comment {
-    margin: 0 0 17px 0;
+    margin: 0 0 11px 0;
   }
 
   @media (min-width: var.$tablet-width) {
@@ -52,7 +52,7 @@
     }
 
     &--comment {
-      padding: 50px 50px 53px 50px;
+      padding: 50px 50px 46px 50px;
     }
   }
 
@@ -60,6 +60,14 @@
     width: 1150px;
 
     margin: 0 auto;
+
+    &--color {
+      padding: 48px 50px 52px 50px;
+    }
+
+    &--comment {
+      padding: 50px 50px 42px 50px;
+    }
   }
 }
 
@@ -87,11 +95,11 @@
   }
 
   &--type {
-    margin: 0 0 30px 0;
+    margin: 0 0 32px 0;
   }
 
   &--color {
-    margin: 0 0 25px 0;
+    margin: 0 0 23px 0;
   }
 
   &--name {
@@ -148,27 +156,27 @@
     min-width: 174px;
 
     &--type {
-      padding: 19px 15px 15px 46px;
+      padding: 19px 15px 15px 61px;
     }
 
     &--color {
-      padding: 19px 15px 15px 46px;
+      padding: 19px 15px 15px 61px;
     }
 
     &--name {
-      padding: 18px 15px 15px 46px;
+      padding: 18px 15px 15px 61px;
     }
 
     &--phone {
-      padding: 16px 15px 15px 46px;
+      padding: 16px 15px 15px 61px;
     }
 
     &--email {
-      padding: 17px 15px 15px 46px;
+      padding: 17px 15px 15px 61px;
     }
 
     &--comment {
-      padding: 19px 15px 15px 46px;
+      padding: 19px 15px 15px 61px;
     }
   }
 }
@@ -290,18 +298,23 @@
   min-height: 42px;
 
   &::before {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
 
     border-radius: 50%;
   }
 
   @media (min-width: var.$tablet-width) {
+    padding: 0 0 0 80px;
+
     min-height: 52px;
 
     &::before {
-      width: 48px;
-      height: 48px;
+      top: 2px;
+      left: 3px;
+
+      width: 45px;
+      height: 45px;
     }
   }
 }
@@ -314,8 +327,8 @@
     top: 12px;
     left: 12px;
 
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
 
     background-color: var.$input-radio-marker;
     border-radius: 50%;
@@ -323,11 +336,11 @@
 
   @media (min-width: var.$tablet-width) {
     &::after {
-      top: 15.5px;
-      left: 15.5px;
+      top: 16px;
+      left: 17px;
 
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
     }
   }
 }
@@ -501,14 +514,16 @@
   padding: 0 45px 0 0;
 
   @media (min-width: var.$tablet-width) {
+    padding: 0 60px 0 18px;
+  }
+
+  @media (min-width: var.$tablet-width) {
     padding: 0 45px 0 18px;
   }
 }
 
 .form__input-decoration {
   position: absolute;
-
-  top: 50%;
 
   transform: translateY(-50%);
 
@@ -521,6 +536,7 @@
   cursor: pointer;
 
   &--phone {
+    bottom: 6px;
     right: 7px;
 
     width: 25px;
@@ -530,6 +546,7 @@
   }
 
   &--email {
+    bottom: 5px;
     right: 3px;
 
     width: 32px;
@@ -540,6 +557,26 @@
 
   &:hover {
     background-color: var.$input-icons-hover;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    &--phone {
+      right: 27px;
+    }
+
+    &--email {
+      right: 22px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    &--phone {
+      right: 8px;
+    }
+
+    &--email {
+      right: 5px;
+    }
   }
 }
 
@@ -609,4 +646,8 @@
 
     min-width: 329px;
   }
+}
+
+.form__button {
+  @include mix.font(var.$main-text, 17px, 700, 16px);
 }

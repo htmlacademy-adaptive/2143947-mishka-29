@@ -68,6 +68,10 @@
 
     &--index {
       background-image: url("../img/jpg/hero-desktop@1x.jpg");
+
+      &::before {
+        background-image: url("../img/svg/zigzag-fill-desktop-index.svg");
+      }
     }
 
     @media (min-resolution: 2dppx) {
@@ -82,10 +86,12 @@
   padding: 73px 30px;
 
   @media (min-width: var.$tablet-width) {
-    padding: 100px 50px 87px 50px;
+    padding: 101px 50px 87px 50px;
   }
 
   @media (min-width: var.$desktop-width) {
+    padding: 101px 50px 113px 50px;
+
     max-width: 1150px;
     margin: 0 auto;
   }
