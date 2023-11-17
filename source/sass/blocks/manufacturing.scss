@@ -212,12 +212,12 @@
   width: calc(100% - 68px);
 
   @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$main-button-font, 17px, 700, 16px);
+
     width: calc(100% - 80px);
   }
 
   @media (min-width: var.$desktop-width) {
-    @include mix.font(var.$main-text, 17px, 700, 16px);
-
     grid-row: 3 / 4;
     grid-column: 2 / 3;
 

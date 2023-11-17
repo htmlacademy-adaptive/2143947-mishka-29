@@ -43,4 +43,8 @@
 
     cursor: default;
   }
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$main-button-font, 17px, 700, 20px);
+  }
 }

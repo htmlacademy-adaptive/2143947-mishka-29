@@ -34,6 +34,8 @@
     flex-direction: row;
     flex-wrap: wrap;
 
+    justify-content: flex-start;
+
     row-gap: 52px;
     column-gap: 51px;
   }
@@ -63,6 +65,8 @@
 
   @media (min-width: var.$desktop-width) {
     flex-direction: column;
+
+    margin: 0;
 
     width: 316px;
   }

@@ -85,6 +85,8 @@
 .hero__wrapper {
   padding: 73px 30px;
 
+  box-sizing: border-box;
+
   @media (min-width: var.$tablet-width) {
     padding: 101px 50px 87px 50px;
   }

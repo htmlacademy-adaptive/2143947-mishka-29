@@ -536,7 +536,7 @@
   cursor: pointer;
 
   &--phone {
-    bottom: 6px;
+    top: 44px;
     right: 7px;
 
     width: 25px;
@@ -546,7 +546,7 @@
   }
 
   &--email {
-    bottom: 5px;
+    top: 47px;
     right: 3px;
 
     width: 32px;
@@ -561,11 +561,17 @@
 
   @media (min-width: var.$tablet-width) {
     &--phone {
+      top: calc(50% - 4px);
       right: 27px;
+
+      transform: translateY(-50%);
     }
 
     &--email {
+      top: calc(50% - 1px);
       right: 22px;
+
+      transform: translateY(-50%);
     }
   }
 
@@ -649,5 +655,5 @@
 }
 
 .form__button {
-  @include mix.font(var.$main-text, 17px, 700, 16px);
+  @include mix.font(var.$main-button-font, 17px, 700, 16px);
 }

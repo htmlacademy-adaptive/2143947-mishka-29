@@ -19,6 +19,10 @@
   }
 }
 
+.page__body--no-js .map-widget__interactive {
+  display: none;
+}
+
 .map-widget__fallback {
   position: absolute;
 

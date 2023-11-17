@@ -36,6 +36,10 @@
   }
 }
 
+.page__body--no-js .main-navigation__toggle {
+  display: none;
+}
+
 .main-navigation__toggle-decoration {
   position: absolute;
 
@@ -134,6 +138,23 @@
   display: block;
 
   position: initial;
+
+  padding: 79px 0 0 0;
+
+  @media (min-width: var.$tablet-width) {
+    display: grid;
+
+    position: initial;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    padding: 0 50px;
+
+    box-sizing: border-box;
+
+    z-index: 1;
+  }
 }
 
 .main-navigation__site-list,

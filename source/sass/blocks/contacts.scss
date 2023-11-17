@@ -240,9 +240,3 @@
     margin: 0 119px 0 175px;
   }
 }
-
-.contacts__link {
-  @media (min-width: var.$tablet-width) {
-    @include mix.font(var.$bold-text, 17px, 700, 20px);
-  }
-}
