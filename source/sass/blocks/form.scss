@@ -118,6 +118,7 @@
 
   @media (min-width: var.$tablet-width) {
     min-width: 167px;
+    max-width: 200px;
 
     margin: 0;
 
@@ -415,6 +416,8 @@
 
   @media (min-width: var.$tablet-width) {
     @include mix.font(var.$bold-text, 19px, 700, 18px);
+
+    max-width: 200px;
   }
 }
 

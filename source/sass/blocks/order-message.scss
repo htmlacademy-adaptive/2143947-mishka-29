@@ -118,11 +118,15 @@
 }
 
 .order-message__control:hover + .order-message__control-description {
-  border: 2px solid var.$modal-radio-border-hover;
+  border: solid 2px var.$modal-radio-border-hover;
+}
+
+.order-message__control:focus + .order-message__control-description {
+  border: solid 2px var.$modal-radio-border-hover;
 }
 
 .order-message__control:checked + .order-message__control-description {
-  border: 2px solid var.$modal-radio-border-active;
+  border: solid 2px var.$modal-radio-border-active;
 }
 
 .order-message__control:disabled + .order-message__control-description {
