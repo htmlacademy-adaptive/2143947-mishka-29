@@ -1,0 +1,71 @@
+@use "../global/variables" as var;
+
+.main-header {
+  min-height: 79px;
+  width: 100%;
+
+  position: relative;
+
+  box-shadow: 0 1px 0 0 var.$header-shadow, 0 1px 0 0 var.$header-shadow inset;
+
+  z-index: 1;
+
+  background-color: transparent;
+
+  @media (min-width: var.$tablet-width) {
+    background: none;
+
+    box-shadow: unset;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 1150px;
+
+    margin: 0 auto;
+  }
+}
+
+.main-header__logo-link {
+  position: absolute;
+
+  top: 22px;
+  left: 50%;
+
+  width: 86px;
+  height: 35px;
+
+  transform: translateX(-50%);
+
+  transition: opacity 0.3s ease;
+
+  overflow: hidden;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    left: 50px;
+
+    width: 113px;
+    height: 46px;
+
+    transform: translateX(0);
+
+    z-index: 5;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    top: 9px;
+    left: 50%;
+
+    width: 149px;
+    height: 72px;
+
+    transform: translateX(-50%);
+  }
+}

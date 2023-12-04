@@ -1,0 +1,80 @@
+@use "../global/variables" as var;
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  column-gap: 29px;
+  row-gap: 8px;
+
+  @media (min-width: var.$tablet-width) {
+    justify-content: flex-start;
+  }
+}
+
+.social-list__link {
+  display: block;
+
+  width: 28px;
+  height: 22px;
+
+  padding: 2.5px 0;
+
+  background-color: transparent;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 28px;
+    height: 22px;
+
+    mask-repeat: no-repeat;
+    background-color: var.$social-link-icon;
+
+    transition: background-color 0.3s ease;
+  }
+
+  &--vkontakte {
+    &::before {
+      mask: url("../img/svg/vkontakte.svg");
+    }
+  }
+
+  &--telegram {
+    &::before {
+      mask: url("../img/svg/telegram.svg");
+    }
+  }
+
+  &--youtube {
+    &::before {
+      mask: url("../img/svg/youtube.svg");
+    }
+  }
+
+  &:hover {
+    &::before {
+      background-color: var.$social-link-icon-hover;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: var.$social-link-icon-active;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0;
+  }
+}

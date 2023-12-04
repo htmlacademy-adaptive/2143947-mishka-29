@@ -1,0 +1,76 @@
+@use "../global/variables" as var;
+
+.map-widget {
+  position: relative;
+}
+
+.map-widget__interactive {
+  position: relative;
+
+  width: 100%;
+  height: 454px;
+
+  border: none;
+
+  z-index: 5;
+
+  @media (min-width: var.$tablet-width) {
+    height: 457px;
+  }
+}
+
+.page__body--no-js .map-widget__interactive {
+  display: none;
+}
+
+.map-widget__fallback {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 454px;
+
+  overflow: hidden;
+
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 145px;
+    left: calc(50% - 22px);
+
+    width: 67px;
+    height: 100px;
+
+    background-image: url("../img/svg/map-pin.svg");
+    background-repeat: no-repeat;
+
+    z-index: 1;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    height: 457px;
+
+    &::before {
+      top: 139px;
+      left: calc(50% - 21px);
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    &::before {
+      top: 146px;
+      left: 239px;
+    }
+  }
+}
+
+.map-widget__fallback img {
+  height: 100%;
+
+  object-position: center center;
+}

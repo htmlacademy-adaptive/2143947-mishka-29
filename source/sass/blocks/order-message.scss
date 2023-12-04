@@ -1,0 +1,138 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.order-message {
+  position: relative;
+
+  width: 100%;
+
+  padding: 30px 29px 46px 29px;
+
+  background-color: var.$message-background;
+  box-shadow: 0 5px 10px 0 var.$modal-shadow;
+  border: 1px solid var.$modal-border;
+
+  box-sizing: border-box;
+
+  @media (min-width: var.$tablet-width) {
+    width: 566px;
+
+    padding: 38px 92px 46px 93px;
+  }
+}
+
+.order-message__heading {
+  @include mix.font(var.$bold-text, 25px, 700, 30px);
+
+  display: block;
+
+  text-transform: uppercase;
+
+  padding: 0 40px 0 44px;
+  margin: 0 auto 14px auto;
+
+  width: fit-content;
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$bold-text, 30px, 700, 57px);
+
+    padding: 0;
+    margin: 0 auto 11px auto;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.order-message__form {
+  @media (min-width: var.$tablet-width) {
+    padding: 0 15px 0 14px;
+
+    box-sizing: border-box;
+  }
+}
+
+.order-message__description {
+  @include mix.font(var.$main-text, 15px, 400, 30px);
+
+  text-align: center;
+
+  margin: 0 0 22px 0;
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$main-text, 17px, 400, 30px);
+
+    margin: 0 0 20px 0;
+  }
+}
+
+.order-message__list {
+  @include mix.list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  column-gap: 7px;
+  row-gap: 7px;
+
+  justify-content: flex-start;
+
+  width: fit-content;
+  max-width: 100%;
+
+  margin: 0 auto 30px auto;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 auto 31px auto;
+  }
+}
+
+.order-message__control-description {
+  @include mix.font(var.$main-text, 17px, 700, 16px);
+
+  text-transform: uppercase;
+
+  display: flex;
+
+  width: 82px;
+  height: 52px;
+
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid var.$modal-radio-border;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  transition: border-color 0.3s ease;
+
+  @media (min-width: var.$tablet-width) {
+    width: 112px;
+  }
+}
+
+.order-message__control:hover + .order-message__control-description {
+  border: solid 2px var.$modal-radio-border-hover;
+}
+
+.order-message__control:focus + .order-message__control-description {
+  border: solid 2px var.$modal-radio-border-hover;
+}
+
+.order-message__control:checked + .order-message__control-description {
+  border: solid 2px var.$modal-radio-border-active;
+}
+
+.order-message__control:disabled + .order-message__control-description {
+  opacity: 0.1;
+
+  pointer-events: none;
+
+  cursor: default;
+}

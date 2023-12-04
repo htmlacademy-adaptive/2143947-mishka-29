@@ -1,0 +1,277 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.products {
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 67px 50px 53px 50px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 111px 50px 57px 50px;
+    margin: 0 auto;
+
+    width: 1150px;
+  }
+}
+
+.products__list {
+  @include mix.list-reset;
+
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 30px;
+
+  @media (min-width: var.$tablet-width) {
+    row-gap: 54px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+
+    row-gap: 52px;
+    column-gap: 51px;
+  }
+}
+
+.products__item {
+  width: 100%;
+  max-width: 450px;
+
+  margin: 0 auto;
+
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 var.$products-cart-shadow;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 var.$products-cart-shadow;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+
+    max-width: unset;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    flex-direction: column;
+
+    margin: 0;
+
+    width: 316px;
+  }
+}
+
+.products__image-link {
+  display: block;
+
+  width: 100%;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-position: center;
+    object-fit: cover;
+
+    vertical-align: bottom;
+
+    transform: scale(1);
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+
+  &:active {
+    img {
+      transform: scale(1.2);
+      opacity: 0.6;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    width: 100%;
+  }
+}
+
+.products__text-wrapper {
+  padding: 28px 5px 25px 27px;
+  border: 1px solid var.$products-cart-border;
+
+  box-sizing: border-box;
+
+  width: 100%;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 27px 30px 25px 32px;
+
+    width: 50%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 1;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 27px 26px 25px 27px;
+
+    width: 100%;
+  }
+}
+
+.products__link {
+  @include mix.font(var.$bold-text, 17px, 700, 24px);
+
+  display: block;
+
+  margin: 0 0 6px 0;
+
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$bold-text, 20px, 700, 24px);
+  }
+}
+
+.products__description {
+  @include mix.font(var.$main-text, 13px, 400, 30px);
+
+  margin: 0 0 18px 0;
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$main-text, 15px, 400, 30px);
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 13px 0;
+  }
+}
+
+.products__order-wrapper {
+  display: flex;
+
+  justify-content: space-between;
+
+  column-gap: 10px;
+
+  padding: 23px 0 0 0;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: calc(100% - 23px);
+    height: 1px;
+
+    background-color: var.$products-cart-border;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    padding: 24px 0 0 0;
+
+    margin: auto 0 0 0;
+
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.products__price {
+  @include mix.font(var.$bold-text, 15px, 700, 24px);
+
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$bold-text, 17px, 700, 24px);
+  }
+}
+
+.products__order-link {
+  display: block;
+
+  width: 24px;
+  height: 19px;
+
+  position: relative;
+
+  margin: 0 19px 0 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 21px;
+    height: 18px;
+
+    transform: translate(-50%, -50%);
+
+    mask-image: url("../img/svg/cart.svg");
+    mask-repeat: no-repeat;
+
+    background-color: var.$products-cart-icon;
+
+    transition: background-color 0.3s ease;
+  }
+
+  &:hover {
+    &::before {
+      background-color: var.$products-cart-icon-hover;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: var.$products-cart-icon-active;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 4px 0 0;
+  }
+}

@@ -1,0 +1,222 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.about-us {
+  padding: 31px 30px;
+
+  box-sizing: border-box;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 55.5px 50px 82px 50px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 68px 225px 90px 225px;
+
+    width: 1150px;
+    margin: 0 auto;
+  }
+}
+
+.about-us__heading {
+  @include mix.font(var.$bold-text, 25px, 700, 30px);
+
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$bold-text, 43px, 700, 50px);
+  }
+
+  @media (min-width: var.$desktop-width) {
+    @include mix.font(var.$bold-text, 53px, 700, 57px);
+  }
+}
+
+.about-us__wrapper {
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.about-us__list {
+  @include mix.list-reset;
+
+  @media (min-width: var.$tablet-width) {
+    width: 50%;
+
+    padding: 0 10px 0 0;
+
+    box-sizing: border-box;
+  }
+}
+
+.about-us__item {
+  @include mix.font(var.$bold-text, 17px, 700, 20px);
+
+  padding: 83px 0 0 0;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    background-repeat: no-repeat;
+  }
+
+  &:first-of-type {
+    padding: 82px 0 0 0;
+  }
+
+  &:last-of-type {
+    padding: 84px 0 0 0;
+  }
+
+  &--ecology {
+    &::before {
+      top: 28px;
+      left: 8px;
+
+      width: 33px;
+      height: 38px;
+
+      background-image: url("../img/svg/icon-ecology.svg");
+    }
+  }
+
+  &--price {
+    &::before {
+      top: 30px;
+      left: 0;
+
+      width: 47px;
+      height: 27px;
+
+      background-image: url("../img/svg/icon-price.svg");
+    }
+  }
+
+  &--likes {
+    &::before {
+      top: 35px;
+      left: 7px;
+
+      width: 34px;
+      height: 27px;
+
+      background-image: url("../img/svg/icon-likes.svg");
+    }
+  }
+
+  &--handmade {
+    &::before {
+      top: 32px;
+      left: 3px;
+
+      width: 35px;
+      height: 34px;
+
+      background-image: url("../img/svg/icon-handmade.svg");
+    }
+  }
+
+  &--domestic {
+    &::before {
+      top: 33px;
+      left: -5px;
+
+      width: 55px;
+      height: 23px;
+
+      background-image: url("../img/svg/icon-domestic.svg");
+    }
+  }
+
+  &--present {
+    &::before {
+      top: 32px;
+      left: 3px;
+
+      width: 33px;
+      height: 32px;
+
+      background-image: url("../img/svg/icon-present.svg");
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$bold-text, 20px, 700, 22px);
+
+    padding: 110px 0 0 0;
+
+    &:first-of-type {
+      padding: 98px 0 0 0;
+    }
+
+    &:last-of-type {
+      padding: 110px 0 0 0;
+    }
+
+    &--ecology {
+      &::before {
+        top: 41px;
+      }
+    }
+
+    &--price {
+      &::before {
+        top: 57px;
+        left: 1px;
+      }
+    }
+
+    &--likes {
+      &::before {
+        top: 63px;
+        left: 8px;
+      }
+    }
+
+    &--handmade {
+      &::before {
+        top: 45px;
+        left: 2px;
+      }
+    }
+
+    &--domestic {
+      &::before {
+        top: 59px;
+        left: -7px;
+      }
+    }
+
+    &--present {
+      &::before {
+        top: 58px;
+        left: 2px;
+      }
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    &:first-of-type {
+      padding: 95px 0 0 0;
+    }
+
+    &--ecology {
+      &::before {
+        top: 39px;
+      }
+    }
+
+    &--handmade {
+      &::before {
+        top: 43px;
+      }
+    }
+  }
+}

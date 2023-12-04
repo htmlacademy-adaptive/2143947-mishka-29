@@ -1,0 +1,118 @@
+// TEXT COLORS
+
+$main-text: #444444;
+$bold-text: #000000;
+$bright-text: #ffffff;
+$marker-text: #63d1bb;
+
+// BACKGROUND COLORS
+
+$main-background: #ffffff;
+$hero-background: #f1f1f1;
+$index-hero-background: #f9f9f9;
+$footer-background: #f1f1f1;
+$modal-background: rgba(#ffffff, 0.9);
+$message-background: #ffffff;
+$form-additional-background: #f1f1f1;
+
+// SHADOWS
+
+$header-shadow: #ececec;
+$modal-shadow: rgba(#000101, 0.25);
+$products-cart-shadow: rgba(#000000, 0.1);
+
+// BORDERS
+
+$header-border: rgba(#000000, 0.1);
+$weekly-product-table-border: #ececec;
+$slider-button-border: #ececec;
+$footer-border: #e5e5e5;
+$modal-border: #c6c6c6;
+$products-cart-border: #ececec;
+
+// MAIN-BUTTON
+
+$main-button-background: #ffffff;
+$main-button-border: #444444;
+$main-button-font: #444444;
+$main-button-hover-background: #444444;
+$main-button-hover-font: #ffffff;
+$main-button-active-background: #444444;
+$main-button-active-font: rgba(#ffffff, 0.3);
+
+// MODAL-BUTTON
+
+$modal-button-background: #63d1bb;
+$modal-button-border: #63d1bb;
+$modal-button-font: #ffffff;
+$modal-button-hover-background: #46c1ae;
+$modal-button-active-background: #46c1ae;
+$modal-button-active-font: rgba(#ffffff, 0.3);
+
+// BURGER-BUTTON
+
+$burger-menu-closed: #231f20;
+$burger-menu-opened: #000000;
+
+// HERO-LINK
+
+$hero-link-background: #63d1bb;
+$hero-link-background-hover: #59d5bc;
+$hero-link-additional-background: #56c3b2;
+$hero-link-additional-background-hover: #46c1ae;
+
+// EMAIL-LINK
+
+$email-link-border: #62d1ba;
+$email-link-font-hover: #46c1ae;
+$email-link-border-hover: #46c1ae;
+
+// INPUT
+
+$modal-radio-border: rgba(#444444, 0.1);
+$modal-radio-border-hover: rgba(#444444, 0.3);
+$modal-radio-border-active: #62d1ba;
+
+$input-heading: #63d1bb;
+
+$input-border: #444444;
+$input-border-hover: #62d1ba;
+$input-border-active: rgba(#444444, 0.3);
+
+$input-radio-marker: #62d1ba;
+
+$input-shadow: #000000;
+$input-shadow-hover: #62d1ba;
+$input-shadow-active: #62d1ba;
+
+$input-icons: rgba(#000000, 0.2);
+$input-icons-hover: #62d1ba;
+$input-icons-active: #62d1ba;
+
+// ICONS
+
+$header-menu-icons: rgba(#000000, 0.2);
+$header-menu-icons-hover: #63d1bb;
+$header-menu-icons-active: rgba(#63d1bb, 0.3);
+
+$social-link-icon: #231f20;
+$social-link-icon-hover: #46c1ae;
+$social-link-icon-active: rgba(#46c1ae, 0.3);
+
+$academy-icon: #63d1bb;
+$academy-icon-hover: #46c1ae;
+$academy-icon-active: rgba(#46c1ae, 0.3);
+
+$footer-logo: #000000;
+$footer-logo-hover: #46c1ae;
+$footer-logo-active: rgba(#46c1ae, 0.3);
+
+$products-cart-icon: rgba(#000000, 0.2);
+$products-cart-icon-hover: #63d1bb;
+$products-cart-icon-active: rgba(#63d1bb, 0.3);
+
+// VIEWPORTS
+
+$tablet-width: 768px;
+$desktop-width: 1150px;
+$mobile-width-only: 767px;

@@ -1,0 +1,242 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.contacts {
+  padding: 38px 0 39px 0;
+
+  box-sizing: border-box;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 68px 0 57px 0;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      top: 46px;
+      right: 53px;
+
+      width: 47px;
+      height: 81px;
+
+      background-image: url("../img/svg/flag.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 71px 50px 105px 50px;
+
+    width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 527px;
+    grid-template-rows: auto auto auto;
+
+    &::before {
+      top: 131px;
+      right: unset;
+      left: 112px;
+    }
+  }
+}
+
+.contacts__heading {
+  @include mix.font(var.$bold-text, 25px, 700, 30px);
+
+  padding: 0 28px;
+  margin: 0 0 28px 0;
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$bold-text, 43px, 700, 50px);
+
+    padding: 0 150px 0 50px;
+    margin: 0 0 49px 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    @include mix.font(var.$bold-text, 53px, 700, 57px);
+
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+
+    padding: 78px 59px 0 174px;
+    margin: 0 0 34px 0;
+  }
+}
+
+.contacts__wrapper {
+  padding: 0 28px;
+  margin: 0 0 62px 0;
+
+  box-sizing: border-box;
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+
+    padding: 0 50px;
+    margin: 0 0 49px 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+
+    flex-direction: column;
+
+    padding: 0 23px 0 175px;
+    margin: 0 0 81px 0;
+  }
+}
+
+.contacts__email-wrapper {
+  display: flex;
+  column-gap: 35px;
+
+  margin: 0 0 30px 0;
+
+  @media (min-width: var.$tablet-width) {
+    width: 50%;
+
+    column-gap: 24px;
+
+    margin: 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    width: auto;
+
+    margin: 0 0 30px 0;
+  }
+}
+
+.contacts__email-heading {
+  @include mix.font(var.$main-text, 14px, 400, 30px);
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$main-text, 17px, 400, 30px);
+  }
+}
+
+.contacts__email-link {
+  @include mix.font(var.$main-text, 14px, 400, 30px);
+
+  align-self: flex-start;
+
+  position: relative;
+
+  transition: color 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    bottom: 3px;
+    left: 50%;
+
+    width: 100%;
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background-color: var.$email-link-border;
+
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+  }
+
+  &:hover {
+    color: var.$email-link-font-hover;
+
+    &::before {
+      background-color: var.$email-link-border-hover;
+    }
+  }
+
+  &:active {
+    color: var.$email-link-font-hover;
+
+    &::before {
+      background-color: var.$email-link-border-hover;
+      opacity: 0.1;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$main-text, 17px, 400, 30px);
+
+    &::before {
+      bottom: -1px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    &::before {
+      bottom: -4px;
+    }
+  }
+}
+
+.contacts__address-wrapper {
+  display: flex;
+  column-gap: 36px;
+
+  @media (min-width: var.$tablet-width) {
+    width: 50%;
+
+    column-gap: 25px;
+
+    margin: 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    width: auto;
+  }
+}
+
+.contacts__address-heading,
+.contacts__address-description {
+  @include mix.font(var.$main-text, 14px, 400, 30px);
+  margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$main-text, 17px, 400, 30px);
+  }
+}
+
+.contacts__map {
+  height: 454px;
+
+  margin: 0 0 42px 0;
+
+  @media (min-width: var.$tablet-width) {
+    height: 457px;
+
+    margin: 0 0 55px 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-row: 1 / -1;
+    grid-column: 2 / 3;
+
+    margin: 0;
+  }
+}
+
+.contacts__link-wrapper {
+  margin: 0 30px;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 269px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+
+    margin: 0 119px 0 175px;
+  }
+}

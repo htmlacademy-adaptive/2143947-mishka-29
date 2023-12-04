@@ -1,0 +1,44 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.modal-button {
+  @include mix.font(var.$modal-button-font, 17px, 700, 16px);
+  text-transform: uppercase;
+
+  padding: 10px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 52px;
+
+  background-color: var.$modal-button-background;
+  border: 2px solid var.$modal-button-border;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    background-color: var.$modal-button-hover-background;
+  }
+
+  &:active {
+    color: var.$modal-button-active-font;
+
+    background-color: var.$modal-button-active-background;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+
+    pointer-events: none;
+
+    cursor: default;
+  }
+}

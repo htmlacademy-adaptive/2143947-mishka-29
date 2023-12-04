@@ -1,0 +1,36 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.order-knitting {
+  padding: 17px 30px 55px 30px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 54px 0 50px 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 98px 0 50px 0;
+  }
+}
+
+.order-knitting__description {
+  @include mix.font(var.$main-text, 13px, 400, 24px);
+
+  margin: 0 0 29px 0;
+
+  @media (min-width: var.$tablet-width) {
+    @include mix.font(var.$main-text, 17px, 400, 30px);
+
+    padding: 0 50px;
+    margin: 0;
+
+    box-sizing: border-box;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 0 225px;
+    margin: 0 auto;
+
+    width: 1150px;
+  }
+}

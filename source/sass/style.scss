@@ -1,1 +1,68 @@
-// Начните писать стили здесь
+// GLOBAL
+
+@use "./global/fonts.scss";
+@use "./global/global.scss";
+
+// PAGE
+
+@use "./blocks/page.scss";
+@use "./blocks/main-button.scss";
+@use "./blocks/main-container.scss";
+
+// HEADER
+
+@use "./blocks/main-header.scss";
+@use "./blocks/main-navigation.scss";
+@use "./blocks/site-list.scss";
+@use "./blocks/service-list.scss";
+@use "./blocks/site-additional-list.scss";
+
+// HERO
+
+@use "./blocks/hero.scss";
+
+// FOOTER
+
+@use "./blocks/main-footer.scss";
+@use "./blocks/social-list.scss";
+
+// MODAL
+
+@use "./blocks/modal.scss";
+@use "./blocks/order-message.scss";
+@use "./blocks/modal-button.scss";
+
+// INDEX
+// WEEKLY-PRODUCT
+
+@use "./blocks/weekly-product.scss";
+
+// ABOUT-US
+
+@use "./blocks/about-us.scss";
+
+
+// REVIEWS
+
+@use "./blocks/reviews.scss";
+@use "./blocks/slider.scss";
+
+// CONTACTS
+
+@use "./blocks/contacts.scss";
+@use "./blocks/map-widget.scss";
+
+
+// CATALOG
+// PRODUCTS
+
+@use "./blocks/products.scss";
+
+// MANUFACTURING
+
+@use "./blocks/manufacturing.scss";
+
+// ORDER-KNITTING
+
+@use "./blocks/order-knitting.scss";
+@use "./blocks/form.scss";

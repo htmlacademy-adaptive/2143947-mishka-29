@@ -1,0 +1,117 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.slider {
+  position: relative;
+}
+
+.slider__list {
+  @include mix.list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+
+  overflow: hidden;
+}
+
+.slider__item {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+.slider__buttons {
+  position: absolute;
+
+  display: flex;
+
+  bottom: 39px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  @media (min-width: var.$tablet-width) {
+    bottom: 15px;
+    left: unset;
+    right: 19px;
+
+    transform: translateX(0);
+
+    column-gap: 37px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    bottom: 17px;
+  }
+}
+
+.slider__button {
+  position: relative;
+
+  width: 130px;
+  height: 52px;
+
+  padding: 0;
+
+  background-color: transparent;
+
+  border: 1px solid var.$slider-button-border;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 13px;
+    left: 37px;
+
+    width: 50px;
+    height: 26px;
+
+    background-repeat: no-repeat;
+
+    transition: opacity 0.3s ease;
+  }
+
+  &--previous {
+    &::before {
+      background-image: url("../img/svg/huge-arrow-left.svg");
+    }
+  }
+
+  &--next {
+    &::before {
+      background-image: url("../img/svg/huge-arrow-right.svg");
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    width: 50px;
+    height: 26px;
+
+    border: none;
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+  }
+}

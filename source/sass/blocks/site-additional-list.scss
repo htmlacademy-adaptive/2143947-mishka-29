@@ -1,0 +1,51 @@
+@use "../global/variables" as var;
+@use "../global/mixins" as mix;
+
+.site-additional-list {
+  display: none;
+
+  @media (min-width: var.$desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+
+    column-gap: 40px;
+  }
+}
+
+.site-additional-list__item {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  min-height: 64px;
+  width: 180px;
+}
+
+
+.site-additional-list__link {
+  @include mix.font(var.$bold-text, 15px, 700, 24px);
+
+  padding: 20px 10px 20px 0;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  background-color: unset;
+
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: rgba(var.$bold-text, 0.6);
+  }
+
+  &:active {
+    color: rgba(var.$bold-text, 0.3);
+  }
+}
